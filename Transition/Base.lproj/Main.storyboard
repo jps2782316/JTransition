@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCJ-V0-jMC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scroll Tab Bar View Controller-->
+        <scene sceneID="bPv-Hc-iOv">
+            <objects>
+                <tabBarController id="BCJ-V0-jMC" customClass="ScrollTabBarViewController" customModule="Transition" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RAN-Lk-A6D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cku-iw-dfH" kind="relationship" relationship="viewControllers" id="IFp-AH-lK7"/>
+                        <segue destination="VjO-fL-r8Z" kind="relationship" relationship="viewControllers" id="AB4-t5-Cwg"/>
+                        <segue destination="ZJJ-0I-zdd" kind="relationship" relationship="viewControllers" id="Cc1-8d-qZa"/>
+                        <segue destination="R8t-xg-T5q" kind="relationship" relationship="viewControllers" id="1gc-pr-N7x"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKy-Wu-qmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="-390"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="SwB-Ow-BcP">
+            <objects>
+                <navigationController id="Cku-iw-dfH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="tabbar_mainframe" selectedImage="tabbar_mainframeHL" id="fnk-Sp-uba"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nng-9e-qSX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ujl-pC-HZR" kind="relationship" relationship="rootViewController" id="CoE-ei-Lsz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sW8-fa-xqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1481" y="367"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="QIz-En-aHw">
+            <objects>
+                <viewController id="4xa-bY-OQe" customClass="ContactsViewController" customModule="Transition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n4j-JR-Elu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-oS-w4X">
+                                <rect key="frame" x="156.5" y="375.5" width="101" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0R-0r-eC8">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <state key="normal" title="窗体"/>
+                                        <connections>
+                                            <action selector="demo1Clicked:" destination="4xa-bY-OQe" eventType="touchUpInside" id="jW0-uv-qeb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czd-Fv-KM3">
+                                        <rect key="frame" x="0.0" y="30" width="101" height="30"/>
+                                        <state key="normal" title="圆形遮罩实现1"/>
+                                        <connections>
+                                            <action selector="demo2Clicked:" destination="4xa-bY-OQe" eventType="touchUpInside" id="KMt-w6-FzJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iX3-Wq-YXO">
+                                        <rect key="frame" x="0.0" y="60" width="101" height="30"/>
+                                        <state key="normal" title="圆形遮罩实现2"/>
+                                        <connections>
+                                            <action selector="demo3Clicked:" destination="4xa-bY-OQe" eventType="touchUpInside" id="EqE-4m-Pqj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAR-sc-ZYw">
+                                        <rect key="frame" x="0.0" y="90" width="101" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="demo4Clikced:" destination="4xa-bY-OQe" eventType="touchUpInside" id="oLQ-l2-Wv0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-mU-Sad">
+                                        <rect key="frame" x="0.0" y="120" width="101" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="demo5Clikced:" destination="4xa-bY-OQe" eventType="touchUpInside" id="4OB-gW-frM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-cD-rOQ">
+                                <rect key="frame" x="182" y="663" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.38431372549999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wxv-gx-416"/>
+                                    <constraint firstAttribute="width" constant="50" id="pjH-kz-7Ia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="circleBtnClick:" destination="4xa-bY-OQe" eventType="touchUpInside" id="IeO-Fj-UJr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAp-gU-ocC"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="XjO-oS-w4X" firstAttribute="centerY" secondItem="SAp-gU-ocC" secondAttribute="centerY" id="Wti-BY-ebf"/>
+                            <constraint firstItem="XjO-oS-w4X" firstAttribute="centerX" secondItem="SAp-gU-ocC" secondAttribute="centerX" id="ZrN-CB-7nG"/>
+                            <constraint firstItem="SAp-gU-ocC" firstAttribute="bottom" secondItem="JyS-cD-rOQ" secondAttribute="bottom" constant="100" id="hSb-Kv-3MA"/>
+                            <constraint firstItem="JyS-cD-rOQ" firstAttribute="centerX" secondItem="SAp-gU-ocC" secondAttribute="centerX" id="tyq-AM-YHq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pyb-Gd-4Co"/>
+                    <connections>
+                        <outlet property="circelBtn" destination="JyS-cD-rOQ" id="i1a-3n-wRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JE0-EZ-TOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797" y="1046"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="viu-Hw-lhh">
+            <objects>
+                <viewController id="ZJJ-0I-zdd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sTi-I7-W3B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ltm-HC-d7J"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Discover" image="tabbar_discover" selectedImage="tabbar_discoverHL" id="V3q-Tb-vFy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UUp-t0-cgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="367"/>
+        </scene>
+        <!--Me-->
+        <scene sceneID="07V-8k-crn">
+            <objects>
+                <viewController id="R8t-xg-T5q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="thE-yw-UcV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZKs-Ms-O4O"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="tabbar_me" selectedImage="tabbar_meHL" id="UIN-SD-yvR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bei-KB-UH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="367"/>
+        </scene>
+        <!--Chats View Controller-->
+        <scene sceneID="BIn-06-SlK">
+            <objects>
+                <viewController id="ujl-pC-HZR" customClass="ChatsViewController" customModule="Transition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grj-hp-p1k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="plB-5B-qpz">
+                                <rect key="frame" x="185.5" y="420.5" width="43" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCU-YA-vTL">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
+                                        <state key="normal" title="Modal"/>
+                                        <connections>
+                                            <action selector="modalTransitionClicked:" destination="ujl-pC-HZR" eventType="touchUpInside" id="eLJ-YM-t9P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj8-FM-A4P">
+                                        <rect key="frame" x="0.0" y="30" width="43" height="30"/>
+                                        <state key="normal" title="Navi"/>
+                                        <connections>
+                                            <action selector="naviTransitionClicked:" destination="ujl-pC-HZR" eventType="touchUpInside" id="VBC-Tu-A5m"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8xh-mb-GAZ"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="plB-5B-qpz" firstAttribute="centerX" secondItem="8xh-mb-GAZ" secondAttribute="centerX" id="S2y-EB-GFz"/>
+                            <constraint firstItem="plB-5B-qpz" firstAttribute="centerY" secondItem="8xh-mb-GAZ" secondAttribute="centerY" id="sPH-dz-WBt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HDR-Z5-cxV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2r-Aq-7sx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1481" y="1046"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="neS-dq-5Hk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VjO-fL-r8Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="tabbar_contacts" selectedImage="tabbar_contactsHL" id="Awt-ZB-bAP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iNp-N4-cW3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4xa-bY-OQe" kind="relationship" relationship="rootViewController" id="CLT-I0-yLr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ee-N6-2kU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797.10144927536237" y="366.96428571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_contacts" width="27" height="23"/>
+        <image name="tabbar_contactsHL" width="27" height="23"/>
+        <image name="tabbar_discover" width="23" height="23"/>
+        <image name="tabbar_discoverHL" width="23" height="23"/>
+        <image name="tabbar_mainframe" width="25" height="23"/>
+        <image name="tabbar_mainframeHL" width="25" height="23"/>
+        <image name="tabbar_me" width="23" height="23"/>
+        <image name="tabbar_meHL" width="23" height="23"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
