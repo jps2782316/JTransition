@@ -16,11 +16,11 @@ class ChatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-
+    
     @IBAction func modalTransitionClicked(_ sender: Any) {
         let vc = ModalTransitionViewController()
         //设置转场代理(必须在跳转前设置)

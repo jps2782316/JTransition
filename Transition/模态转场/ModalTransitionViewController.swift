@@ -25,15 +25,25 @@ class ModalTransitionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .yellow
+        let btn = UIButton()
+        btn.setTitle("dismiss", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.addTarget(self, action: #selector(dismissClicked(_:)), for: .touchUpInside)
+        btn.center = self.view.center
+        btn.bounds = CGRect(x: 0, y: 0, width: 100, height: 50)
+        self.view.addSubview(btn)
         
+        //如果需要交互转场，则添加一个交互手势
         let verticalPan = UIPanGestureRecognizer()
         verticalPan.addTarget(self, action: #selector(verticalPanHandle(_:)))
         self.view.addGestureRecognizer(verticalPan)
         
+        /*
         let screenEdgePan = UIScreenEdgePanGestureRecognizer()
         screenEdgePan.edges = .left
         screenEdgePan.addTarget(self, action: #selector(screenEdgePanHandle(_:)))
         self.view.addGestureRecognizer(screenEdgePan)
+        */
     }
     
     
@@ -99,6 +109,13 @@ class ModalTransitionViewController: UIViewController {
         default:
             transitionDelegate.interactive = false
         }
+    }
+    
+    
+    
+    
+    @objc func dismissClicked(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

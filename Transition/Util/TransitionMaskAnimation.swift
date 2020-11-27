@@ -11,7 +11,7 @@ import UIKit
 
 class TransitionMaskAnimation: NSObject {
     
-    var duration: TimeInterval = 2
+    var duration: TimeInterval = 0.5
     
     weak var layer: CALayer?
     

@@ -11,30 +11,22 @@ import UIKit
 
 ///通用转场工具类
 class TransitionUtil: NSObject {
-        
     ///转场类型
     var transitionType: TransitionType?
-    
-    
     //交互转场
     var interactive = false
     let interactionTransition = UIPercentDrivenInteractiveTransition()
     
-    
     override init() {
         super.init()
         
-        
     }
-    
-    
 }
 
 
 //MARK:  ------------  动画控制器协议  ------------
 
 extension TransitionUtil: UIViewControllerAnimatedTransitioning {
-    
     //控制转场动画执行时间
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
@@ -42,10 +34,7 @@ extension TransitionUtil: UIViewControllerAnimatedTransitioning {
     
     //执行动画的地方，最核心的方法。
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        //isPresent ? self.presentAnimation(transitionContext: transitionContext) : self.dismissAnimation(transitionContext: transitionContext)
-        
         transitionAnimation(transitionContext: transitionContext)
-        
     }
     
     //如果实现了，会在转场动画结束后调用，可以执行一些收尾工作。
@@ -226,7 +215,6 @@ extension TransitionUtil: UIViewControllerAnimatedTransitioning {
 
 ///自定义模态转场动画时使用
 extension TransitionUtil: UIViewControllerTransitioningDelegate {
-    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.transitionType = .modal(.presentation)
         return self
@@ -237,39 +225,34 @@ extension TransitionUtil: UIViewControllerTransitioningDelegate {
         return self
     }
     
+    //interactive false:非交互转场， true: 交互转场
     func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactive ? self.interactionTransition : nil
     }
     
+    //interactive false:非交互转场， true: 交互转场
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactive ? self.interactionTransition : nil
     }
-    
-    
 }
 
 
 
 /// 自定义navigation转场动画时使用
 extension TransitionUtil: UINavigationControllerDelegate {
-    
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.transitionType = .navigation(operation)
         return self
     }
     
-    
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactive ? self.interactionTransition : nil
     }
-    
 }
 
 
 /// 自定义tab转场动画时使用
 extension TransitionUtil: UITabBarControllerDelegate {
-    
-    
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let fromIndex = tabBarController.viewControllers?.firstIndex(of: fromVC) ?? 0
         let toIndex = tabBarController.viewControllers?.firstIndex(of: toVC) ?? 0
@@ -281,6 +264,4 @@ extension TransitionUtil: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactive ? self.interactionTransition : nil
     }
-    
-    
 }

@@ -9,10 +9,8 @@
 import UIKit
 
 class ScrollTabBarViewController: UITabBarController {
-    
     //滑动手势
     private var panGesture = UIPanGestureRecognizer()
-    
     //转场动画
     private let transitionUtil = TransitionUtil()
     
@@ -21,26 +19,17 @@ class ScrollTabBarViewController: UITabBarController {
         return vcs.count
     }
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //设置转场代理
         self.delegate = transitionUtil
         self.tabBar.tintColor = .green
         
+        //添加交互手势
         panGesture.addTarget(self, action: #selector(panHandle(_:)))
         self.view.addGestureRecognizer(panGesture)
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -92,9 +81,4 @@ class ScrollTabBarViewController: UITabBarController {
         }
     }
     
-    
-    
-    
-    
-
 }

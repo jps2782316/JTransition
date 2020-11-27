@@ -36,7 +36,8 @@ extension TransitionDemoUtil: UIViewControllerAnimatedTransitioning {
     
     //控制转场动画执行时间
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.5
+        //return 1.5
+        return 0.5
     }
     
     //执行动画的地方，最核心的方法。

@@ -19,12 +19,10 @@ enum TransitionType {
     case modal(_ operation: ModalOperation)
 }
 
-
 enum TabBarOperationDirection {
     case left
     case right
 }
-
 
 enum ModalOperation {
     case presentation

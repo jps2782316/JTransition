@@ -10,12 +10,7 @@ import UIKit
 
 class NaviTransitionViewController: UIViewController {
     
-//    private var transitionDelegate: TransitionUtil {
-//        return self.navigationController?.delegate as! TransitionUtil
-//    }
-    
     var transitionDelegate: TransitionUtil!
-    
     
 
     override func viewDidLoad() {

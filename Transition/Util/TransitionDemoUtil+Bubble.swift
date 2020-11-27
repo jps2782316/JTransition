@@ -41,13 +41,14 @@ extension TransitionDemoUtil {
                 bubble.layer.cornerRadius = bubble.frame.size.height / 2
                 bubble.center = startPoint
                 bubble.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-                bubble.backgroundColor = .yellow
+                bubble.backgroundColor = toView.backgroundColor
                 containerView.addSubview(bubble)
                 
                 toView.center = startPoint
                 toView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
                 toView.alpha = 0
                 containerView.addSubview(toView)
+                
                                 
                 UIView.animate(withDuration: duration) {
                     bubble.transform = .identity
@@ -71,7 +72,7 @@ extension TransitionDemoUtil {
                 let bubble = UIView()
                 bubble.frame = CGRect(x: 0, y: 0, width: radius*2, height: radius*2)
                 bubble.layer.cornerRadius = bubble.frame.size.height / 2
-                bubble.backgroundColor = .yellow
+                bubble.backgroundColor = fromView.backgroundColor
                 bubble.center = startPoint
                 bubble.isHidden = false
                 containerView.insertSubview(bubble, at: 0)

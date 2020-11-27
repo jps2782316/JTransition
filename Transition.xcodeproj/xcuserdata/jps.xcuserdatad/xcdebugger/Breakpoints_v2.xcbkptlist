@@ -14,8 +14,8 @@
             filePath = "Transition/&#x6a21;&#x6001;&#x8f6c;&#x573a;/ModalTransitionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "verticalPanHandle(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Transition/&#x6a21;&#x6001;&#x8f6c;&#x573a;/ModalTransitionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "screenEdgePanHandle(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Transition/&#x6a21;&#x6001;&#x8f6c;&#x573a;/ModalTransitionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "screenEdgePanHandle(_:)"
             landmarkType = "7">
          </BreakpointContent>
